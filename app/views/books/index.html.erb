@@ -9,20 +9,22 @@
     </tr>
   </thead>
   <tbody>
+
+    <%= @lists.each do |book| %>
     <tr>
-      <td></td>
-      <td></td>
-      <td>
-        <a class="show_56043" href="/books/56043">Show</a>
-      </td>
+      <td><%= book.title %></td>
+      <td><%= book.body %></td>
+      <td><%= link_to "show",  %></td>
       <td>
         <a data-confirm="Are you sure?" class="destroy_56043" rel="nofllow" data-method="delete" href="/books/56043">Destroy</a>
       </td>
     </tr>
   </tbody>
 </table>
+
+<h2>New book</h2>
 <!-- form_with部分-->
-<%= form_with model:@list do |f| %>
+<%= form_with model:@book do |f| %>
 
 <div class="field">
   <label for="book_title">Title</label>
