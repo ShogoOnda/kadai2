@@ -11,7 +11,7 @@
   <tbody>
     <tr>
       <td></td>
-      <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
+      <td></td>
       <td>
         <a class="show_56043" href="/books/56043">Show</a>
       </td>
@@ -21,3 +21,19 @@
     </tr>
   </tbody>
 </table>
+<!-- form_with部分-->
+<%= form_with model:@list do |f| %>
+
+<div class="field">
+  <label for="book_title">Title</label>
+  <%= f.text_field:title %>
+</div>
+
+<div class="field">
+  <label for="book_body">Body</label>
+  <%= f.text_field:title %>
+</div>
+
+<%= f.submit'Create Book' %>
+
+<% end %>
